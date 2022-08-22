@@ -1,0 +1,9 @@
+#! /bin/bash
+
+file_name="$2"
+folder_name="$1"
+
+echo 'Start Recording Script'
+rosbag record -O ./$folder_name/$file_name /mpc_node/wrench_mpc --duration=45 __name:=my_bag
+echo $txt_name
+rostopic echo -b ./$folder_name/$file_name.bag -p /mpc_node/wrench_mpc > ./$folder_name/$file_name.txt

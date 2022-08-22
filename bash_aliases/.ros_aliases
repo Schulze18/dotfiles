@@ -1,0 +1,8 @@
+alias catkin_release="catkin_make install -C . -DCMAKE_BUILD_TYPE=Release -DXENO=Off -j3"
+alias catkin_debug="catkin_make install -C . -DCMAKE_BUILD_TYPE=Debug -DXENO=Off -j3"
+alias clean_ws="rm build/ devel/ install/ -rf"
+alias catkin_no_dls_gazebo_release="catkin_make install -C . -DCMAKE_BUILD_TYPE=Release -DXENO=Off -DCATKIN_BLACKLIST_PACKAGES="dls-gazebo" -j3"
+alias catkin_mpcros_release='catkin_release -DCMAKE_CXX_FLAGS="-DMPCROS"'
+alias catkin_traj_osqp_release="catkin_release -DCMAKE_CXX_FLAGS='-DTRAJEC_OSQP'"
+
+alias install_osqp='cmake --build . --target install'
